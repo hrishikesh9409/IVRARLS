@@ -1,0 +1,3 @@
+all:
+	g++ -MD -MP -MT -c -msse3 -DUNIX -DGLX_GLXEXT_LEGACY -Wall -O2 -DNDEBUG -I../Common -I../../Include -I../../../External/GL  -I/usr/include/openni2 -I/home/hrishi/Downloads/kinect/NiTE-Linux-x64-2.2/Include/ -I/home/hrishi/Downloads/kinect/OpenNI2/Include/ -fPIC -fvisibility=hidden `pkg-config --cflags opencv` track.cpp -L../../Bin/x86-Release -L/home/hrishi/Downloads/kinect/NiTE-Linux-x64-2.2/Samples/Bin/ -lOpenNI2 -lNiTE2 -Wl,-rpath ./ `pkg-config --libs opencv` -o t
+	g++ simpleLite.cpp -O3 -march=core2 -DHAVE_NFT=1 -I/usr/include/x86_64-linux-gnu -I../../include -O3 -o simpleLite -L/usr/lib/x86_64-linux-gnu -L/usr/lib64 -L../../lib/linux-x86_64 -L../../lib -lARgsub_lite -lARvideo -lAR -lARICP -lAR -lglut -lGLU -lGL -lX11 -lm -lpthread -ljpeg
